@@ -1,0 +1,77 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+  body {
+    background-color: #21201d;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+  }
+
+  .heading a {
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(0, 0, 0);
+    border-radius: 15%;
+    padding: 9px 9px 9px 9px;
+    text-decoration: none;
+  }
+
+  input {
+    width: 350px;
+    height: 25px;
+  }
+
+  button{
+    width: 170px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+</style>
+<div class="container">
+  <div class="heading">
+    <br>
+    <a href="/" class="btn btn_success">Home</a>
+  </div>
+  <br><br><br>
+  <div class="form">
+    <div class="side_img"></div>
+    <div class="form_container">
+      <form action="/article" method="post">
+        <input
+          type="text"
+          name="title"
+          placeholder="Title...................."
+        />
+        <br>
+        <br>
+        <textarea
+          name="des"
+          id=""
+          cols="90"
+          rows="30"
+          placeholder="Your Post.................."
+        ></textarea>
+        <br>
+        <br>
+        <textarea
+          name="info"
+          id=""
+          cols="90"
+          rows="30"
+          placeholder="More info................."
+        ></textarea>
+        <br>
+        <button class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body {
+    background-color: #21201d;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+}
+
+.heading h1 {
+    font-size: 55px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading a {
+    background-color: aliceblue;
+    border: 1px black;
+    border-radius: 15%;
+    padding: 9px 9px 9px 9px;
+}
+
+
+</Style>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>ShowCase Articles</h1>
+            <a href="/article/new">New Article</a>
+        </div>
+<br><br><br>
+<div class="blog">
+<% article.forEach(element => { %>
+<div class="blog_post">
+    <h1><%= element.title.substring(0,15) %> </h1>
+    <p><%= element.des.substring(0,80)%></p>
+    <h5><i><%= element.createdAt.toLocaleDateString() %></i></h5>
+</div>
+
+<div class="buttons">
+    <a href="./article/<%= element.slug %>">Read More</a>
+    <a href="./article/edit/<%= element.id %>">Edit</a>
+    <a href="./article/delete/<%= element.id %>">Delete</a>
+</div>
+
+<% }); %>
+</div> 
+
+    </div>
+</body>
+</html>
